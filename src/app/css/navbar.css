@@ -1,0 +1,90 @@
+nav{
+    width: 100%;
+    box-shadow: 0 2px 3px #c9c9c9;
+    z-index: 999;
+    background: crimson;
+    position: relative;
+}
+nav .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+nav .container i{
+    font-size: 1.5em;
+    color:#FFEC00;
+    cursor: pointer;
+}
+nav .container .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+nav .list{
+    position: absolute;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 20%;
+    box-shadow: 2px 0 3px #ccc;
+    padding: 20px 0;
+    display: none;
+    background: #fff;
+    z-index: 9999;
+}
+nav .list ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .list ul a{
+    margin: 5px 0;
+    padding: 10px 0;
+    width: 250px;
+    border: 2px solid #fff;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+nav .list ul a:hover{
+    border-radius: 4px;
+    text-align: center;
+    animation: nav-bdr-anm 2s infinite;
+    transition: all .3s ease;
+}
+
+@keyframes nav-bdr-anm {
+    0%{
+        border-top: 2px solid #fff;
+    }
+    20%{
+        border-top: 2px solid #000;
+    }
+    40%{
+        border-right: 2px solid #000;
+    }
+    60%{
+        border-bottom: 2px solid #000;
+    }
+    80%{
+        border-left: 2px solid #000;
+    }
+    100%{
+        border: 2px solid #fff;
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav .list{
+        width: 70%;
+    }
+}
+/* @media screen and (max-width:576px) {
+    nav .list{
+        width: 100%;
+    }
+} */
